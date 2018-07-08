@@ -2,8 +2,9 @@ from __future__ import absolute_import
 import numpy as np
 from pyti import catch_errors
 from six.moves import range
+from numba import jit
 
-
+@jit
 def accumulation_distribution(close_data, high_data, low_data, volume):
     """
     Accumulation/Distribution.
