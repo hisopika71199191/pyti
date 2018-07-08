@@ -3,8 +3,9 @@ import numpy as np
 from pyti import catch_errors
 from pyti.function_helper import fill_for_noncomputable_vals
 from six.moves import range
+from numba import jit
 
-
+@jit
 def aroon_up(data, period):
     """
     Aroon Up.
@@ -21,7 +22,7 @@ def aroon_up(data, period):
     a_up = fill_for_noncomputable_vals(data, a_up)
     return a_up
 
-
+@jit
 def aroon_down(data, period):
     """
     Aroon Down.
