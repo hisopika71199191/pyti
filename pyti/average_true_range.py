@@ -3,8 +3,9 @@ import numpy as np
 from pyti.true_range import true_range
 from pyti.smoothed_moving_average import smoothed_moving_average
 from six.moves import range
+from numba import jit
 
-
+@jit
 def average_true_range(close_data, period):
     """
     Average True Range.
