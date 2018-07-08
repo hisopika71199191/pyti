@@ -4,8 +4,9 @@ from pyti import catch_errors
 from pyti.average_true_range import (
     average_true_range as atr
     )
+from numba import jit
 
-
+@jit
 def average_true_range_percent(close_data, period):
     """
     Average True Range Percent.
